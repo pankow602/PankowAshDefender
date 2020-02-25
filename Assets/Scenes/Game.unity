@@ -469,6 +469,9 @@ MonoBehaviour:
   speed: 0.3
   maxBound: 10
   minBound: -10
+  shot: {fileID: 0}
+  shotSpawn: {fileID: 0}
+  fireRate: 0
 --- !u!1 &916890724
 GameObject:
   m_ObjectHideFlags: 0
@@ -641,6 +644,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4750123047837055779, guid: cb7b4be9999eef8409246c627666c999,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -705,10 +712,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_IsTrigger
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4978507454371664563, guid: cb7b4be9999eef8409246c627666c999,
         type: 3}
@@ -780,6 +783,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1448870979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1448870976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 236eda0a1d34d734e93bd50afa01c834, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.3
 --- !u!1 &1525777251
 GameObject:
   m_ObjectHideFlags: 0

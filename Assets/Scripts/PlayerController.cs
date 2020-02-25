@@ -8,14 +8,18 @@ public class PlayerController : MonoBehaviour
     public float speed;
     public float maxBound, minBound;
 
-    // Start is called before the first frame update
+    public GameObject shot;
+    public Transform shotSpawn;
+    public float fireRate;
+
+    private float nextFire;
+
     void Start()
     {
         player = GetComponent<Transform>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         float h = Input.GetAxis("Horizontal");
 
@@ -25,5 +29,15 @@ public class PlayerController : MonoBehaviour
             h = 0;
 
         player.position += Vector3.right * h * speed;
+    }
+
+
+    void update()
+    {
+        if(Input.GetButton("Fire1") && Time.time> nextFire)
+        {
+            nextFire = Time.time + fireRate;
+            Instantiate (shot, shotSpawn.position, shotSpawn.rotation);
+        }
     }
 }
