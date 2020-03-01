@@ -32,7 +32,7 @@ public class BulletController : MonoBehaviour
         {
             Destroy(other.gameObject);
             Destroy(gameObject);
-            //increase player score
+            PlayerScore.playerScore += 10;
         }
         //if player shoots the base, the base doesn't get damaged
         else if (other.tag == "base")
