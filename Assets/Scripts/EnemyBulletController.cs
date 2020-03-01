@@ -16,6 +16,8 @@ public class EnemyBulletController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        bullet.position += Vector3.up * -speed;
+
         if(bullet.position.y <= -10){
             Destroy(bullet.gameObject);
         }

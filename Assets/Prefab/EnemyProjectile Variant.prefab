@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d60279842eb396a459eb871b480fd45a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.1
+  speed: 0.3
 --- !u!1001 &8266097766961948742
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -78,7 +78,7 @@ PrefabInstance:
     - target: {fileID: 5107378994357138508, guid: 80decd75c1369584dbfd844f752a308c,
         type: 3}
       propertyPath: m_Name
-      value: EnemyProjectile
+      value: EnemyProjectile Variant
       objectReference: {fileID: 0}
     - target: {fileID: 5107378994357138508, guid: 80decd75c1369584dbfd844f752a308c,
         type: 3}

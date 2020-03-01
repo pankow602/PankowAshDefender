@@ -2992,7 +2992,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 694e5c6d32c04c44f9b1488b9b1cc2a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 0.8
   shot: {fileID: 3771230588163873802, guid: 500cf6414168ceb4fb0738e19d52db0d, type: 3}
   winText: {fileID: 1304353433}
   fireRate: 0.997
