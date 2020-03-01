@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BaseDefeat : MonoBehaviour
 {
@@ -17,7 +18,8 @@ public class BaseDefeat : MonoBehaviour
     {
         if (playerBase.childCount == 0)
         {
-            GameOver.isPlayerDead = true;
+            int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+            SceneManager.LoadScene(currentSceneIndex + 1);
         }
     }
 }
