@@ -35,7 +35,7 @@ public class BulletController : MonoBehaviour
             FindObjectOfType<GameSession>().AddToScore(10);
         }
         //if player shoots the base, the base doesn't get damaged
-        else if (other.tag == "base")
+        else if (other.tag == "Base")
         {
             Destroy(gameObject);
         }

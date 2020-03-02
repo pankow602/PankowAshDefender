@@ -38,6 +38,7 @@ public class EnemyController : MonoBehaviour
             if(Random.value > fireRate)
             {
                 Instantiate(shot, enemy.position, enemy.rotation);
+                GetComponent<AudioSource>().Play();
             }
 
             if(enemy.position.y <= -4)

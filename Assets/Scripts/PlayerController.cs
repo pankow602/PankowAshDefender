@@ -34,11 +34,12 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        //
+        //fire button
         if(Input.GetKeyDown("space") && Time.time> nextFire)
         {
             nextFire = Time.time + fireRate;
             Instantiate (shot, shotSpawn.position, shotSpawn.rotation);
+            GetComponent<AudioSource>().Play();
         }
     }
 }

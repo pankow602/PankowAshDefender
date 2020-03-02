@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyBulletController : MonoBehaviour
 {
@@ -29,7 +30,9 @@ public class EnemyBulletController : MonoBehaviour
         {
             Destroy(other.gameObject);
             Destroy(gameObject);
-            GameOver.isPlayerDead = true;
+            int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+            SceneManager.LoadScene(currentSceneIndex + 1);
+            GetComponent<AudioSource>().Play();
         }
         else if(other.tag == "Base")
         {
